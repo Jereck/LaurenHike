@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<div class="container">
+    <h1><%= hike.name %></h1>
+    <hr />
+    <p><%= hike.description %></p>
+
+    <div class="row">
+        <% hike.files.forEach(function(file){ %>
+            <div class="col s12 m6 l4">
+                <img class="responsive-img materialboxed z-depth-3" width="650" src="/uploads/<%= file.filename %>">
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include partials/footer %>
