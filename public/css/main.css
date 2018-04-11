@@ -1,0 +1,61 @@
+.img-box {
+    margin-top: 20px;
+}
+
+.admin {
+    margin-bottom: 0;
+}
+
+/* The sidebar menu */
+.snav {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #4db6ac;
+    overflow-x: hidden;
+}
+
+/* The navigation menu links */
+.snav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+body > div.row.admin.center-align > div.col.s12.m6.l2 {
+    padding: 0;
+}
+
+/* When you mouse over the navigation links, change their color */
+.snav a:hover {
+    background-color: #3b8a82;
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .snav {
+        padding-top: 15px;
+    }
+
+    .snav a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .snav {
+        height: 100%;
+    }
+}
