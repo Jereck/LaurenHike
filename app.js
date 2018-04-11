@@ -7,7 +7,7 @@ const   express     = require('express'),
 const app = express();
 
 // mongoose.connect("mongodb://localhost/hike_photos");
-mongoose.connect("mongodb://jakereck:stella@ds139919.mlab.com:39919/lauren_hike")
+mongoose.connect("mongodb://jakereck:stella@ds139919.mlab.com:39919/lauren_hike");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
