@@ -6,8 +6,8 @@ const   express     = require('express'),
 
 const app = express();
 
-mongoose.connect("mongodb://localhost/hike_photos");
-// mongoose.connect("mongodb://jakereck:stella@ds139919.mlab.com:39919/lauren_hike");
+// mongoose.connect("mongodb://localhost/hike_photos");
+mongoose.connect("mongodb://jakereck:stella@ds139919.mlab.com:39919/lauren_hike");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -144,10 +144,12 @@ app.get("/admin", function(req, res){
     res.render("admin");
 })
 
-app.listen(3000, function(){
-    console.log("The server is running..");
-});
-
-// app.listen(process.env.PORT, process.env.IP, function(){
-//     console.log("Server is running!")
+// app.listen(3000, function(){
+//     console.log("The server is running..");
 // });
+
+const port = process.env.PORT || 9000;
+
+app.listen(port, function(){
+    console.log("Server is running on: ", port);
+});
